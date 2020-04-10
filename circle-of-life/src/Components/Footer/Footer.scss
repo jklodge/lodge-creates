@@ -1,0 +1,21 @@
+@import "../../shared/styles";
+
+.footer {
+  background: $white;
+  margin: 0;
+  padding: 20px;
+
+  h1 {
+    font: $sub-heading;
+    font-weight: 500;
+    color: $purple;
+  }
+  p {
+    font: $paragraph;
+    color: $orange;
+  }
+  .copyright {
+    font: $paragraph;
+    color: $black;
+  }
+}

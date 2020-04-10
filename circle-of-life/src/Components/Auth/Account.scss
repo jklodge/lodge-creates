@@ -1,0 +1,45 @@
+@import "../../shared/styles";
+
+.accountPage {
+  background: $orange;
+  padding: 30px;
+
+  h1 {
+    font: $header;
+    margin: 0 20px 50px;
+  }
+
+  .accountTitle {
+    font: $paragraph;
+    margin: 0 20px;
+    text-align: left;
+  }
+
+  input {
+    background: none;
+    border-width: 0 0 2px;
+    border-color: $white;
+    color: $purple;
+    font: $paragraph;
+    margin: 0 20px 20px;
+    outline: 0;
+    padding: 15px 0;
+    width: 85%;
+
+    &::placeholder {
+      color: $white;
+    }
+
+    &[type="date"] {
+      color: $white;
+    }
+
+    &:focus {
+      border: $purple solid 2px;
+    }
+
+    &:-internal-autofill-selected {
+      background: none;
+    }
+  }
+}

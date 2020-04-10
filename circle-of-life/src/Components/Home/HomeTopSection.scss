@@ -1,0 +1,47 @@
+@import "../../shared/styles";
+
+.homeTopPage {
+  background: $orange;
+  padding-bottom: 10px;
+
+  button {
+    border: none;
+    border-radius: 30px;
+    color: $white;
+    font: $buttonText;
+    background-color: $purple;
+    height: 54px;
+    width: 285px;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  .buttonContainer {
+    text-align: center;
+    width: 100%;
+  }
+
+  .homeTopPara {
+    margin: 43px;
+  }
+  p {
+    color: $white;
+    font: $paragraph;
+    text-align: center;
+  }
+
+  h1 {
+    color: $white;
+    font: $sub-heading;
+    margin-top: 43px;
+    text-align: center;
+  }
+
+  .registering {
+    margin-left: 40px;
+    text-align: left;
+  }
+}

@@ -1,0 +1,58 @@
+@import "../../shared/styles";
+
+.SwipeSection {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-top-left-radius: 24%;
+  border-top-right-radius: 24%;
+  background-color: rgba($orange, 0.17);
+  height: 390px;
+  display: flex;
+  justify-content: space-between;
+
+  .HomeTextContainer {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    @media only screen and (max-width: 349px) {
+      width: 310px;
+    }
+
+    h1 {
+      color: $orange;
+      font: $header;
+      margin: 0;
+      text-align: center;
+    }
+    .swipeHeader {
+      color: $purple;
+      font-size: 18px;
+      margin: 0 11%;
+    }
+    p {
+      color: $orange;
+      font: $paragraph;
+      margin: 17px 0;
+      text-align: left;
+      letter-spacing: 0.21px;
+    }
+  }
+
+  button {
+    background: $purple;
+    border: none;
+    border-radius: 30px;
+    color: $white;
+
+    height: 54px;
+    margin-bottom: 20px;
+    width: 277px;
+  }
+  a:-webkit-any-link {
+    color: $white;
+    text-decoration: none;
+  }
+}

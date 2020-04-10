@@ -1,0 +1,128 @@
+@import "../../shared/styles";
+.signUpContainer {
+  background: $orange;
+}
+.topUpLinks {
+  h1 {
+    color: $white;
+    font: $header;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h3 {
+    color: $white;
+    font: $sub-heading;
+    margin: 20px;
+  }
+}
+.signInLinks {
+  p {
+    color: $white;
+    font: $paragraph;
+    margin: 20px;
+  }
+}
+
+.signForm {
+  h3 {
+    color: $white;
+    font: $sub-heading;
+    margin: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      padding: 0 20px;
+      color: $white;
+    }
+
+    span {
+      color: $white;
+      font: $paragraph;
+      margin: 0 auto;
+      padding: 10px 0;
+      width: 318px;
+    }
+
+    a {
+      font: $paragraph;
+      text-align: center;
+    }
+
+    input {
+      padding: 0 10px;
+    }
+
+    select {
+      width: 318px !important;
+    }
+    input,
+    select {
+      background: rgba($white, 0.17);
+      border: none;
+      border-radius: 10px;
+      color: $white;
+      margin: 0 auto;
+      width: 298px;
+
+      &::placeholder {
+        color: $white;
+      }
+
+      &[type="date"] {
+        color: $white;
+      }
+
+      &:focus {
+        border: $purple solid 2px;
+      }
+
+      &:-internal-autofill-selected {
+        background: none;
+      }
+    }
+    .signButton {
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font: $buttonText;
+      background-color: $purple;
+      height: 48px;
+      width: 285px;
+    }
+
+    .buttonContainer {
+      margin-top: 10px;
+      text-align: center;
+      width: 100%;
+    }
+    a {
+      padding: 20px;
+    }
+  }
+}
+
+// h2 {
+//   width: 100%;
+//   text-align: center;
+//   border-bottom: 1px solid #000;
+//   line-height: 0.1em;
+//   margin: 10px 0 20px;
+// }
+// h2 {
+//   width: 80%;
+//   text-align: center;
+//   border-bottom: 1px solid $white;
+//   line-height: 0.1em;
+//   margin: 10px 0 20px;
+// }
+
+// h2 span {
+//   background: $orange;
+//   color: $white;
+//   padding: 0 10px;
+// }

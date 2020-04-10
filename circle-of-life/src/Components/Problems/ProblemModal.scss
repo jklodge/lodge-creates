@@ -1,0 +1,73 @@
+@import "../../shared/styles";
+
+.MuiDialog-paperWidthSm {
+  max-width: 600px;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  max-height: 100%;
+  background: #ec8c6a;
+}
+
+.MuiPaper-root.MuiDialog-paper.MuiDialog-paperScrollPaper.MuiDialog-paperWidthSm.MuiPaper-elevation24.MuiPaper-rounded {
+  margin: 0;
+  max-height: 100%;
+}
+
+.MuiDialogContent-root {
+  background: #ec8c6a;
+}
+p {
+  color: $white;
+}
+h1 {
+  font: $header;
+}
+
+a {
+  color: black;
+}
+.MuiPaper-root {
+  background-color: $orange !important;
+}
+
+form {
+  margin: 0 30px;
+
+  textarea.form-control.col-md-12 {
+    background-color: $transparent-orange;
+  }
+
+  input {
+    color: $white;
+    margin: 10px;
+    text-align: right;
+    width: 100%;
+  }
+}
+
+.list-group-item {
+  background-color: $transparent-orange;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 30px;
+}
+
+.solution-list {
+  color: $white;
+  margin: 5px 30px;
+}
+
+.solution {
+  margin: 0;
+}
+
+.form {
+  margin: 0;
+}
+
+.modalHeader {
+  color: $white;
+  margin: 30px;
+}

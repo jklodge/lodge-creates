@@ -1,0 +1,27 @@
+@import "../src/shared/styles";
+
+@font-face {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./shared/fonts/AvenirLTStd-Book.otf"); /* IE9 Compat Modes */
+  src: local("Avenir"), local("Avenir"),
+    url("./shared/fonts/AvenirLTStd-Book.otf?#iefix")
+      format("embedded-opentype");
+}
+body {
+  background-color: #ec8c6a;
+  color: $white;
+  font-family: "Avenir";
+  font-weight: 300;
+  margin: 0;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+.App {
+  background-color: $white;
+}

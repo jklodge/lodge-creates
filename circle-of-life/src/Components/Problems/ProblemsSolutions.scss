@@ -1,0 +1,81 @@
+@import "../../shared/styles";
+
+.ProblemsSolutions {
+  background-color: $transparent-orange;
+  padding: 22px 39px;
+
+  p {
+    font: $paragraph;
+  }
+
+  ul {
+    font: $paragraph;
+    list-style: none;
+    padding: 0;
+  }
+
+  h3 {
+    font: $sub-heading;
+    pointer-events: none;
+  }
+
+  .selectContainer {
+    display: flex;
+    flex-direction: column;
+
+    .circleNumbers {
+      align-items: center;
+      border-radius: 50%;
+      background-color: $purple;
+      display: flex;
+      justify-content: center;
+      height: 25px;
+      margin-right: 6px;
+      width: 25px;
+    }
+
+    .plusCircle {
+      align-items: center;
+      border-radius: 50%;
+      background-color: rgba($orange, 0.2);
+      display: flex;
+      justify-content: center;
+      height: 25px;
+      margin-right: 6px;
+      width: 25px;
+    }
+
+    .numberCircle {
+      align-items: center;
+      border-radius: 50%;
+      background-color: ($purple);
+      display: flex;
+      justify-content: center;
+      height: 25px;
+      margin-right: 6px;
+      width: 25px;
+    }
+
+    .selector {
+      align-items: center;
+      display: flex;
+      margin: 5px;
+    }
+  }
+
+  .draggableList {
+    li {
+      background-color: $box-orange;
+      border-radius: 8px;
+      display: flex;
+      height: 74px;
+      margin: 20px 0;
+      width: 275px;
+    }
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

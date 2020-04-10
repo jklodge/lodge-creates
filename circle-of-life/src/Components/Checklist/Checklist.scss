@@ -1,0 +1,32 @@
+@import "../../shared/styles";
+
+.Checklist {
+  background-color: $transparent-orange;
+  padding: 22px 39px;
+
+  .checklistHeader {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .solutionContainer {
+    border-bottom: solid 1px;
+  }
+
+  .solution {
+    border-bottom: solid 0.5px rgba(255, 255, 255, 0.5);
+  }
+
+  .problemTitle {
+    font-weight: 700;
+    padding: 15px 0;
+  }
+
+  .solutionText {
+    padding: 10px 0;
+  }
+
+  p {
+    font: $paragraph;
+  }
+}
