@@ -1,0 +1,21 @@
+.footer {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.92);
+  color: #fff;
+  display: flex;
+  height: 28px;
+  justify-content: space-between;
+  max-height: 28px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  img {
+    width: 20px;
+  }
+  .bookImage {
+    padding-left: 15px;
+  }
+  .instagram {
+    padding-right: 15px;
+  }
+}

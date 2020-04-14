@@ -1,0 +1,13 @@
+.coming {
+  align-items: center;
+  background-color: gray;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 70vh;
+  justify-content: center;
+  img {
+    border-radius: 50%;
+    width: 200px;
+  }
+}
