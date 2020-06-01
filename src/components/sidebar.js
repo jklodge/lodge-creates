@@ -1,11 +1,9 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 import Social from "./social"
 import "../styles.scss"
 
-const Sidebar = ({ siteTitle }) => (
+const Sidebar = () => (
   <Container>
     <H1Styled>Lodge Creates</H1Styled>
     <PStyled>
