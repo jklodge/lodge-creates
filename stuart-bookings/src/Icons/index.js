@@ -1,8 +1,0 @@
-export { default as DropOffBadgeBlank } from './DropOffBadgeBlank'
-export { default as DropOffBadgeError } from './DropOffBadgeError'
-export { default as DropOffBadgePresent } from './DropOffBadgePresent'
-export { default as DropOffMarker } from './DropOffMarker'
-export { default as PickUpBadgeBlank } from './PickUpBadgeBlank'
-export { default as PickUpBadgeError } from './PickUpBadgeError'
-export { default as PickUpBadgePresent } from './PickUpBadgePresent'
-export { default as PickUpMarker } from './PickUpMarker'
