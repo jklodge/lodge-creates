@@ -6,6 +6,7 @@
  */
 
 import React, { useEffect, useState } from "react"
+import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
@@ -35,7 +36,7 @@ const Layout = ({ children }) => {
     <>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <Container loaded={loaded}>
-        <SEO />
+        <SEO title={"Lodge Creates"} />
         <Main>{children}</Main>
       </Container>
     </>

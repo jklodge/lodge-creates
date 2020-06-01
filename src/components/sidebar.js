@@ -28,14 +28,15 @@ const Container = styled.div`
 
   @media only screen and (max-width: 600px) {
     width: auto;
+    padding: 50px 20px;
   }
 `
 
 const H1Styled = styled.h1`
   text-transform: uppercase;
   font-size: 29px;
-  background-color: #c8f5f5;
-  border: solid 20px #c8f5f5;
+  background-color: #b1eaea;
+  border: solid 20px #b1eaea;
   text-align: center;
   margin: 0 -20px;
   padding: 10px 4px;

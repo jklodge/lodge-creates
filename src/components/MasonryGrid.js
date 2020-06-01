@@ -170,7 +170,7 @@ export default MasonryGrid
 
 const Container = styled.div`
   display: flex;
-  background: #c8f5f5;
+  background: #b1eaea;
   position: relative;
   padding: 35px 60px;
   a {
