@@ -1,5 +1,4 @@
 module.exports = {
-  // pathPrefix: "/jklodge.github.io/",
   siteMetadata: {
     title: `Lodge creates`,
     description: `Lodge creates selection of built websites`,
