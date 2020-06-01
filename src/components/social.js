@@ -1,10 +1,10 @@
-import { Link } from "gatsby";
-import PropTypes from "prop-types";
-import styled from "styled-components";
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelopeOpen } from "@fortawesome/fontawesome-free-solid";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "gatsby"
+import PropTypes from "prop-types"
+import styled from "styled-components"
+import React from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelopeOpen } from "@fortawesome/fontawesome-free-solid"
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 const Social = () => (
   <div className="contact">
@@ -21,13 +21,16 @@ const Social = () => (
       <FontAwesomeIcon color="black" size="lg" icon={faEnvelopeOpen} />
     </AStyled>
   </div>
-);
-export default Social;
+)
+export default Social
 
 const AStyled = styled.a`
   margin: 5px;
-  &:hover {
+  border: solid 1px #ccc;
+  padding: 6px;
+  border-radius: 25px;
+  &:hover svg {
     transform: scale(1.1);
   }
   transition: all 0.2s ease-in-out;
-`;
+`

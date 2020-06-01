@@ -12,6 +12,7 @@ import styled from "styled-components"
 
 import Header from "./header"
 import "./layout.css"
+import SEO from "./seo"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,8 +29,8 @@ const Layout = ({ children }) => {
     <>
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <Container>
+        <SEO />
         <Main>{children}</Main>
-        <footer>© {new Date().getFullYear()}</footer>
       </Container>
     </>
   )
@@ -48,7 +49,6 @@ const Container = styled.div`
 `
 const Main = styled.div`
   display: flex;
-  flex-direction: column;
 
   @media only screen and (max-width: 600px) {
     flex-direction: column;
