@@ -177,6 +177,9 @@ const Container = styled.div`
     color: black;
     text-decoration: none;
   }
+  @media only screen and (max-width: 600px) {
+    padding: 5px;
+  }
 `
 const Image = styled.img`
   display: block;

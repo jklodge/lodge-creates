@@ -21,10 +21,22 @@ body {
   display: flex;
   margin-left: -30px; /* gutter size offset */
   width: auto;
+  @media only screen and (max-width: 600px) {
+    margin: auto;
+    margin-left: 0px; /* gutter size offset */
+    flex-direction: column;
+  }
 }
+
 .my-masonry-grid_column {
   padding-left: 30px; /* gutter size */
   background-clip: padding-box;
+  @media only screen and (max-width: 600px) {
+    padding-left: 0px; /* gutter size */
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+  }
 }
 
 /* Style your items */
