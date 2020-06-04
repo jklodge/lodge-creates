@@ -1,4 +1,6 @@
 import React from "react"
+import { Link } from "gatsby"
+
 // import Masonry from "react-masonry-component"
 import Masonry from "react-masonry-css"
 
@@ -16,6 +18,8 @@ import PoemPortraits from "../images/Poemportraits.png"
 import MoulinRouge from "../images/moulinrouge.png"
 import RadicalLux from "../images/radicallux.png"
 import RollingStones from "../images/rollingstones.png"
+import Audemars from "../images/audemars.png"
+
 import "../styles.scss"
 // import { useStaticQuery } from "gatsby"
 import styled from "styled-components"
@@ -35,20 +39,17 @@ const MasonryGrid = ({ data }) => (
       className="my-masonry-grid"
       columnClassName="my-masonry-grid_column"
     >
-      <a target="_blank" href="https://ads.google.com/intl/en_gb/getstarted/">
+      <Link to="/google-ads">
+        {/* <a target="_blank" href="https://ads.google.com/intl/en_gb/getstarted/"> */}
         <ImageContainer className="grid-item">
           <Image src={GoogleAds} alt="Google ads website" />
           <TextContainer>
             <h3>Google Ads</h3>
-            <p>Built with: Angular, Python, Material UI</p>
-            {/* <p>
-            Working for the agency Phantom on their main driver, Google Ads.
-            Working with Angular on the frontend, and python on the backend,
-            maintaining any feature requests, bug fixes and design discussions.
-          </p> */}
+            <p>Maintained with: Angular, Python, Material UI</p>
           </TextContainer>
         </ImageContainer>
-      </a>
+        {/* </a> */}
+      </Link>
       <a target="_blank" href="https://ecommerce.yourdaye.com/">
         <ImageContainer className="grid-item">
           <Image src={Daye} alt="Daye website" />
@@ -67,6 +68,15 @@ const MasonryGrid = ({ data }) => (
           </TextContainer>
         </ImageContainer>
       </a>
+      <a target="_blank" href="https://www.powwownow.co.uk/sign-in">
+        <ImageContainer className="grid-item">
+          <Image src={PowWow} alt="PowWow website" />
+          <TextContainer>
+            <h3>PowWowNow - Sign in/Sign up Journey</h3>
+            <p>Built with: React, Python</p>
+          </TextContainer>
+        </ImageContainer>
+      </a>
       <a
         target="_blank"
         href="https://wearebohemians.moulinrougemusicalalbum.com/#/home"
@@ -76,15 +86,6 @@ const MasonryGrid = ({ data }) => (
           <TextContainer>
             <h3>Sony - Moulin Rouge Character Match</h3>
             <p>Built with: Angular 2+, Typsecript, Spotify API</p>
-          </TextContainer>
-        </ImageContainer>
-      </a>
-      <a target="_blank" href="https://www.powwownow.co.uk/sign-in">
-        <ImageContainer className="grid-item">
-          <Image src={PowWow} alt="PowWow website" />
-          <TextContainer>
-            <h3>PowWowNow - Sign in/Sign up Journey</h3>
-            <p>Built with: React, Python</p>
           </TextContainer>
         </ImageContainer>
       </a>
@@ -118,6 +119,38 @@ const MasonryGrid = ({ data }) => (
           <p>Description</p>
         </TextContainer>
       </ImageContainer> */}
+      <ImageContainer className="grid-item">
+        <Image src={Audemars} alt="Audemars site image" />
+        <TextContainer>
+          <h3>Financial Times - Audemars Piguet Partnership</h3>
+          <p>Built with: Vanilla JS, Hugo</p>
+        </TextContainer>
+      </ImageContainer>
+
+      <a
+        target="_blank"
+        href="https://www.selfridges.com/GB/en/features/articles/selfridges-loves/the-rolling-stones-at-selfridges/"
+      >
+        <ImageContainer className="grid-item">
+          <Image src={RollingStones} alt="RollingStones" />
+          <TextContainer>
+            <h3>Selfridges - Rolling Stones Site</h3>
+            <p>Built with: Vanilla JS/Adobe Experience Manager </p>
+          </TextContainer>
+        </ImageContainer>
+      </a>
+      <a
+        target="_blank"
+        href="https://www.selfridges.com/QA/en/features/articles/radical-luxury/radical-luxury-at-selfridges/"
+      >
+        <ImageContainer className="grid-item">
+          <Image src={RadicalLux} alt="RadicalLux" />
+          <TextContainer>
+            <h3>Selfridges - Radical Luxury Site</h3>
+            <p>Built with: Vanilla JS/Adobe Experience Manager </p>
+          </TextContainer>
+        </ImageContainer>
+      </a>
       <a
         target="_blank"
         href="https://artsexperiments.withgoogle.com/poemportraits"
@@ -127,37 +160,6 @@ const MasonryGrid = ({ data }) => (
           <TextContainer>
             <h3>Google Arts & Culture</h3>
             <p>Managed the build of this AI experience</p>
-          </TextContainer>
-        </ImageContainer>
-      </a>
-      <a
-        target="_blank"
-        href="https://www.selfridges.com/GB/en/features/articles/selfridges-loves/the-rolling-stones-at-selfridges/"
-      >
-        <ImageContainer className="grid-item">
-          <Image src={RollingStones} alt="RollingStones" />
-          <TextContainer>
-            <h3>Selfridges - Rolling Stones Site</h3>
-            <p>Vanilla JS/Adobe Experience Manager </p>
-          </TextContainer>
-        </ImageContainer>
-      </a>
-      {/* <ImageContainer className="grid-item">
-        <Image src={Spinner} alt="Spinner" />
-        <TextContainer>
-          <h3>Heading</h3>
-          <p>Description</p>
-        </TextContainer>
-      </ImageContainer> */}
-      <a
-        target="_blank"
-        href="https://www.selfridges.com/QA/en/features/articles/radical-luxury/radical-luxury-at-selfridges/"
-      >
-        <ImageContainer className="grid-item">
-          <Image src={RadicalLux} alt="RadicalLux" />
-          <TextContainer>
-            <h3>Selfridges - Radical Luxury Site</h3>
-            <p>Vanilla JS/Adobe Experience Manager </p>
           </TextContainer>
         </ImageContainer>
       </a>
@@ -176,6 +178,7 @@ const Container = styled.div`
   a {
     color: black;
     text-decoration: none;
+    cursor: pointer;
   }
   @media only screen and (max-width: 600px) {
     padding: 5px;
@@ -191,7 +194,6 @@ const Image = styled.img`
 const ImageContainer = styled.div`
   box-shadow: 0 0 5px #ccc;
   margin: 30px 10px;
-  cursor: pointer;
   &:hover {
     transform: scale(1.1);
   }

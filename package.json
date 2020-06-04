@@ -19,6 +19,7 @@
     "gatsby-plugin-sharp": "^2.6.4",
     "gatsby-plugin-styled-components": "^3.3.2",
     "gatsby-source-filesystem": "^2.3.4",
+    "gatsby-source-prismic": "^3.1.1",
     "gatsby-transformer-sharp": "^2.5.3",
     "gh-pages": "^3.0.0",
     "node-sass": "^4.14.1",
@@ -28,6 +29,7 @@
     "react-fontawesome": "^1.7.1",
     "react-helmet": "^6.0.0",
     "react-masonry-css": "^1.0.14",
+    "react-router-dom": "^5.2.0",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

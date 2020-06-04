@@ -62,6 +62,6 @@ const Main = styled.div`
 
   @media only screen and (max-width: 600px) {
     flex-direction: column;
-    padding: 30px;
+    padding: 0;
   }
 `

@@ -4,4 +4,44 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-// You can delete this file if you're not using it
+const path = require("path")
+exports.createPages = async ({ reporter, actions, graphql }) => {
+  const { createPage } = actions
+  const sitePage = path.resolve("src/components/sitePage.js")
+  const result = await graphql(`
+    {
+      sites: allPrismicSites {
+        edges {
+          node {
+            id
+            uid
+            data {
+              title {
+                text
+              }
+              rich_text {
+                text
+              }
+              site_link {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  if (result.errors) {
+    reporter.panic(result.errors)
+  }
+  result.data.sites.edges.forEach(({ node }) => {
+    // Create a page for each blog post
+    createPage({
+      path: `/${node.uid}`,
+      component: sitePage,
+      context: {
+        id: node.id,
+      },
+    })
+  })
+}

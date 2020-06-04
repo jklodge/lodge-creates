@@ -13,6 +13,25 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-source-prismic",
+      options: {
+        repositoryName: "LodgeCreates",
+        // Get the correct URLs in blog posts
+        linkResolver: ({ node, key, value }) => doc => {
+          // Your link resolver
+          if (doc.type === "sites") return `/${doc.uid}`
+          // URL for a product type
+          // Backup for all other types
+          return "/"
+        },
+        // PrismJS highlighting for labels and slices
+        // Remove this config option if you only have one language in your Prismic repository
+        schemas: {
+          sites: require("./src/schemas/sites.json"),
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-sharp`,
