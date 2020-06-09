@@ -5,7 +5,7 @@ import { faEnvelopeOpen } from "@fortawesome/fontawesome-free-solid"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 
 const Social = () => (
-  <div className="contact">
+  <Container className="contact">
     <AStyled target="_blank" href="https://github.com/jklodge">
       <FontAwesomeIcon color="black" size="lg" icon={faGithub} />
     </AStyled>
@@ -18,14 +18,22 @@ const Social = () => (
     >
       <FontAwesomeIcon color="black" size="lg" icon={faEnvelopeOpen} />
     </AStyled>
-  </div>
+  </Container>
 )
 export default Social
+
+const Container = styled.div`
+  display: flex;
+`
 
 const AStyled = styled.a`
   margin: 5px;
   border: solid 1px #ccc;
-  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   border-radius: 25px;
   &:hover svg {
     transform: scale(1.1);

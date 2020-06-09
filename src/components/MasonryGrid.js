@@ -4,6 +4,8 @@ import { Link } from "gatsby"
 // import Masonry from "react-masonry-component"
 import Masonry from "react-masonry-css"
 
+import TransitionLink from "gatsby-plugin-transition-link"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 // import Img from "gatsby-image"
 import Layout from "./layout"
 import Crimeno from "../images/crimeno.png"
@@ -39,7 +41,34 @@ const MasonryGrid = ({ data }) => (
       className="my-masonry-grid"
       columnClassName="my-masonry-grid_column"
     >
-      <Link to="/google-ads">
+      <AniLink swipe direction="left" color="#008b8b" to="moulin-rouge">
+        <ImageContainer className="grid-item">
+          <Image src={MoulinRouge} alt="Sony Moulin Rouge website" />
+          <TextContainer>
+            <h3>Sony - Moulin Rouge Character Match</h3>
+            <p>Built with: Angular 2+, Typsecript, Spotify API</p>
+          </TextContainer>
+        </ImageContainer>
+      </AniLink>
+      <AniLink swipe direction="left" color="#008b8b" to="/daye-blog-site">
+        <ImageContainer className="grid-item">
+          <Image src={DayeVitals} alt="Vitals website" />
+          <TextContainer>
+            <h3>Daye - Blog Site</h3>
+            <p>Built with: React, Typsecript, Gatsby, Node</p>
+          </TextContainer>
+        </ImageContainer>
+      </AniLink>
+      <AniLink swipe direction="left" color="#008b8b" to="testing-for-all">
+        <ImageContainer className="grid-item">
+          <Image src={tfa} alt="Tfa website" />
+          <TextContainer>
+            <h3>Testing For All - Covid Testing Kit Site</h3>
+            <p>Built with: React, Material UI, Node</p>
+          </TextContainer>
+        </ImageContainer>
+      </AniLink>
+      <AniLink swipe direction="left" color="#008b8b" to="/google-ads">
         {/* <a target="_blank" href="https://ads.google.com/intl/en_gb/getstarted/"> */}
         <ImageContainer className="grid-item">
           <Image src={GoogleAds} alt="Google ads website" />
@@ -49,26 +78,8 @@ const MasonryGrid = ({ data }) => (
           </TextContainer>
         </ImageContainer>
         {/* </a> */}
-      </Link>
-      <a target="_blank" href="https://ecommerce.yourdaye.com/">
-        <ImageContainer className="grid-item">
-          <Image src={Daye} alt="Daye website" />
-          <TextContainer>
-            <h3>Daye - Ecommerce</h3>
-            <p>Built with: React, Typsecript, Gatsby, Node</p>
-          </TextContainer>
-        </ImageContainer>
-      </a>
-      <a target="_blank" href="https://yourdaye.com/">
-        <ImageContainer className="grid-item">
-          <Image src={DayeVitals} alt="Vitals website" />
-          <TextContainer>
-            <h3>Daye - Blog Site</h3>
-            <p>Built with: React, Typsecript, Gatsby, Node</p>
-          </TextContainer>
-        </ImageContainer>
-      </a>
-      <a target="_blank" href="https://www.powwownow.co.uk/sign-in">
+      </AniLink>
+      <AniLink swipe direction="left" color="#008b8b" to="/powwownow">
         <ImageContainer className="grid-item">
           <Image src={PowWow} alt="PowWow website" />
           <TextContainer>
@@ -76,28 +87,7 @@ const MasonryGrid = ({ data }) => (
             <p>Built with: React, Python</p>
           </TextContainer>
         </ImageContainer>
-      </a>
-      <a
-        target="_blank"
-        href="https://wearebohemians.moulinrougemusicalalbum.com/#/home"
-      >
-        <ImageContainer className="grid-item">
-          <Image src={MoulinRouge} alt="Sony Moulin Rouge website" />
-          <TextContainer>
-            <h3>Sony - Moulin Rouge Character Match</h3>
-            <p>Built with: Angular 2+, Typsecript, Spotify API</p>
-          </TextContainer>
-        </ImageContainer>
-      </a>
-      <a target="_blank" href="https://app.testingforall.org/">
-        <ImageContainer className="grid-item">
-          <Image src={tfa} alt="Tfa website" />
-          <TextContainer>
-            <h3>Testing For All - Covid Testing Kit Site</h3>
-            <p>Built with: React, Material UI, Node</p>
-          </TextContainer>
-        </ImageContainer>
-      </a>
+      </AniLink>
       {/* <ImageContainer className="grid-item">
         <Image src={Crimeno} alt="crimeno" />
         <TextContainer>
@@ -119,17 +109,29 @@ const MasonryGrid = ({ data }) => (
           <p>Description</p>
         </TextContainer>
       </ImageContainer> */}
-      <ImageContainer className="grid-item">
-        <Image src={Audemars} alt="Audemars site image" />
-        <TextContainer>
-          <h3>Financial Times - Audemars Piguet Partnership</h3>
-          <p>Built with: Vanilla JS, Hugo</p>
-        </TextContainer>
-      </ImageContainer>
-
-      <a
-        target="_blank"
-        href="https://www.selfridges.com/GB/en/features/articles/selfridges-loves/the-rolling-stones-at-selfridges/"
+      <AniLink swipe direction="left" color="#008b8b" to="piguet-audemars">
+        <ImageContainer className="grid-item">
+          <Image src={Audemars} alt="Audemars site image" />
+          <TextContainer>
+            <h3>Financial Times - Audemars Piguet Partnership</h3>
+            <p>Built with: Vanilla JS, Hugo</p>
+          </TextContainer>
+        </ImageContainer>
+      </AniLink>
+      <AniLink swipe direction="left" color="#008b8b" to="/daye-ecommerce">
+        <ImageContainer className="grid-item">
+          <Image src={Daye} alt="Daye website" />
+          <TextContainer>
+            <h3>Daye - Ecommerce</h3>
+            <p>Built with: React, Typsecript, Gatsby, Node</p>
+          </TextContainer>
+        </ImageContainer>
+      </AniLink>
+      <AniLink
+        swipe
+        direction="left"
+        color="#008b8b"
+        to="selfridges-rolling-stones"
       >
         <ImageContainer className="grid-item">
           <Image src={RollingStones} alt="RollingStones" />
@@ -138,10 +140,12 @@ const MasonryGrid = ({ data }) => (
             <p>Built with: Vanilla JS/Adobe Experience Manager </p>
           </TextContainer>
         </ImageContainer>
-      </a>
-      <a
-        target="_blank"
-        href="https://www.selfridges.com/QA/en/features/articles/radical-luxury/radical-luxury-at-selfridges/"
+      </AniLink>
+      <AniLink
+        swipe
+        direction="left"
+        color="#008b8b"
+        to="selfridges-radical-luxury"
       >
         <ImageContainer className="grid-item">
           <Image src={RadicalLux} alt="RadicalLux" />
@@ -150,11 +154,8 @@ const MasonryGrid = ({ data }) => (
             <p>Built with: Vanilla JS/Adobe Experience Manager </p>
           </TextContainer>
         </ImageContainer>
-      </a>
-      <a
-        target="_blank"
-        href="https://artsexperiments.withgoogle.com/poemportraits"
-      >
+      </AniLink>
+      <AniLink swipe direction="left" color="#008b8b" to="/poem-portraits">
         <ImageContainer className="grid-item">
           <Image src={PoemPortraits} alt="PoemPortraits" />
           <TextContainer>
@@ -162,7 +163,7 @@ const MasonryGrid = ({ data }) => (
             <p>Managed the build of this AI experience</p>
           </TextContainer>
         </ImageContainer>
-      </a>
+      </AniLink>
     </Masonry>
     <Footer>© {new Date().getFullYear()}</Footer>
   </Container>
@@ -180,7 +181,11 @@ const Container = styled.div`
     text-decoration: none;
     cursor: pointer;
   }
-  @media only screen and (max-width: 600px) {
+  p {
+    color: #008b8b;
+    font-weight: 700;
+  }
+  @media only screen and (max-width: 768px) {
     padding: 5px;
   }
 `

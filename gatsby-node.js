@@ -19,11 +19,17 @@ exports.createPages = async ({ reporter, actions, graphql }) => {
               title {
                 text
               }
+              image {
+                url
+              }
               rich_text {
                 text
               }
               site_link {
                 url
+              }
+              built_with {
+                text
               }
             }
           }

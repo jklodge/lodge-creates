@@ -4,4 +4,8 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 
-// You can delete this file if you're not using it
+// import wrapWithProvider from "./wrap-with-provider"
+import CustomLayout from "./wrap-page-element"
+
+// export const wrapRootElement = wrapWithProvider
+export const wrapPageElement = CustomLayout

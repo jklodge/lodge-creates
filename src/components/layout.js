@@ -10,10 +10,12 @@ import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+// import "animate.min.css"
 
 import Header from "./header"
 import "./layout.css"
 import SEO from "./seo"
+import Sidebar from "./sidebar"
 
 const Layout = ({ children }) => {
   const [loaded, setLoaded] = useState(false)
@@ -37,7 +39,8 @@ const Layout = ({ children }) => {
       {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
       <Container loaded={loaded}>
         <SEO title={"Lodge Creates"} />
-        <Main>{children}</Main>
+        <Sidebar />
+        {children}
       </Container>
     </>
   )
@@ -54,13 +57,9 @@ const Container = styled.div`
   opacity: ${({ loaded }) => (loaded ? 1 : 0)};
   visibility: ${({ loaded }) => (loaded ? "visible" : "hidden")};
   background: #f4f4f4;
-  @media only screen and (max-width: 600px) {
-  }
-`
-const Main = styled.div`
   display: flex;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     flex-direction: column;
     padding: 0;
   }

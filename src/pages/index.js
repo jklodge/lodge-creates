@@ -1,19 +1,11 @@
 import React from "react"
 
-import Layout from "../components/layout"
 import "../styles.scss"
 
-// import "../styles.scss"
-import Sidebar from "../components/sidebar"
 import styled from "styled-components"
 import MasonryGrid from "../components/MasonryGrid"
 
-const IndexPage = ({ data }) => (
-  <Layout>
-    <Sidebar />
-    <MasonryGrid />
-  </Layout>
-)
+const IndexPage = ({ data }) => <MasonryGrid />
 
 export default IndexPage
 
