@@ -24,6 +24,14 @@ export default Social
 
 const Container = styled.div`
   display: flex;
+  margin: 20px 0;
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 5px;
+  }
 `
 
 const AStyled = styled.a`

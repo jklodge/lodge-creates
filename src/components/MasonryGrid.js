@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import colours from "../colours"
 
 // import Masonry from "react-masonry-component"
 import Masonry from "react-masonry-css"
@@ -41,7 +42,7 @@ const MasonryGrid = ({ data }) => (
       className="my-masonry-grid"
       columnClassName="my-masonry-grid_column"
     >
-      <AniLink swipe direction="left" color="#008b8b" to="moulin-rouge">
+      <AniLink swipe direction="right" to="moulin-rouge">
         <ImageContainer className="grid-item">
           <Image src={MoulinRouge} alt="Sony Moulin Rouge website" />
           <TextContainer>
@@ -50,7 +51,7 @@ const MasonryGrid = ({ data }) => (
           </TextContainer>
         </ImageContainer>
       </AniLink>
-      <AniLink swipe direction="left" color="#008b8b" to="/daye-blog-site">
+      <AniLink swipe direction="right" to="/daye-blog-site">
         <ImageContainer className="grid-item">
           <Image src={DayeVitals} alt="Vitals website" />
           <TextContainer>
@@ -59,7 +60,7 @@ const MasonryGrid = ({ data }) => (
           </TextContainer>
         </ImageContainer>
       </AniLink>
-      <AniLink swipe direction="left" color="#008b8b" to="testing-for-all">
+      <AniLink swipe direction="right" to="testing-for-all">
         <ImageContainer className="grid-item">
           <Image src={tfa} alt="Tfa website" />
           <TextContainer>
@@ -68,8 +69,7 @@ const MasonryGrid = ({ data }) => (
           </TextContainer>
         </ImageContainer>
       </AniLink>
-      <AniLink swipe direction="left" color="#008b8b" to="/google-ads">
-        {/* <a target="_blank" href="https://ads.google.com/intl/en_gb/getstarted/"> */}
+      <AniLink swipe direction="right" to="/google-ads">
         <ImageContainer className="grid-item">
           <Image src={GoogleAds} alt="Google ads website" />
           <TextContainer>
@@ -77,9 +77,8 @@ const MasonryGrid = ({ data }) => (
             <p>Maintained with: Angular, Python, Material UI</p>
           </TextContainer>
         </ImageContainer>
-        {/* </a> */}
       </AniLink>
-      <AniLink swipe direction="left" color="#008b8b" to="/powwownow">
+      <AniLink swipe direction="right" to="/powwownow">
         <ImageContainer className="grid-item">
           <Image src={PowWow} alt="PowWow website" />
           <TextContainer>
@@ -109,7 +108,7 @@ const MasonryGrid = ({ data }) => (
           <p>Description</p>
         </TextContainer>
       </ImageContainer> */}
-      <AniLink swipe direction="left" color="#008b8b" to="piguet-audemars">
+      <AniLink swipe direction="right" to="piguet-audemars">
         <ImageContainer className="grid-item">
           <Image src={Audemars} alt="Audemars site image" />
           <TextContainer>
@@ -118,7 +117,7 @@ const MasonryGrid = ({ data }) => (
           </TextContainer>
         </ImageContainer>
       </AniLink>
-      <AniLink swipe direction="left" color="#008b8b" to="/daye-ecommerce">
+      <AniLink swipe direction="right" to="/daye-ecommerce">
         <ImageContainer className="grid-item">
           <Image src={Daye} alt="Daye website" />
           <TextContainer>
@@ -127,12 +126,7 @@ const MasonryGrid = ({ data }) => (
           </TextContainer>
         </ImageContainer>
       </AniLink>
-      <AniLink
-        swipe
-        direction="left"
-        color="#008b8b"
-        to="selfridges-rolling-stones"
-      >
+      <AniLink swipe direction="right" to="selfridges-rolling-stones">
         <ImageContainer className="grid-item">
           <Image src={RollingStones} alt="RollingStones" />
           <TextContainer>
@@ -141,26 +135,21 @@ const MasonryGrid = ({ data }) => (
           </TextContainer>
         </ImageContainer>
       </AniLink>
-      <AniLink
-        swipe
-        direction="left"
-        color="#008b8b"
-        to="selfridges-radical-luxury"
-      >
-        <ImageContainer className="grid-item">
-          <Image src={RadicalLux} alt="RadicalLux" />
-          <TextContainer>
-            <h3>Selfridges - Radical Luxury Site</h3>
-            <p>Built with: Vanilla JS/Adobe Experience Manager </p>
-          </TextContainer>
-        </ImageContainer>
-      </AniLink>
-      <AniLink swipe direction="left" color="#008b8b" to="/poem-portraits">
+      <AniLink swipe direction="right" to="/poem-portraits">
         <ImageContainer className="grid-item">
           <Image src={PoemPortraits} alt="PoemPortraits" />
           <TextContainer>
             <h3>Google Arts & Culture</h3>
             <p>Managed the build of this AI experience</p>
+          </TextContainer>
+        </ImageContainer>
+      </AniLink>
+      <AniLink swipe direction="right" to="selfridges-radical-luxury">
+        <ImageContainer className="grid-item">
+          <Image src={RadicalLux} alt="RadicalLux" />
+          <TextContainer>
+            <h3>Selfridges - Radical Luxury Site</h3>
+            <p>Built with: Vanilla JS/Adobe Experience Manager </p>
           </TextContainer>
         </ImageContainer>
       </AniLink>
@@ -173,7 +162,7 @@ export default MasonryGrid
 
 const Container = styled.div`
   display: flex;
-  background: #b1eaea;
+  background: ${colours.bgGray};
   position: relative;
   padding: 35px 60px;
   a {

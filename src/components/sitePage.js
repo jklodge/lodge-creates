@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 import styled from "styled-components"
+import colours from "../colours"
 
 const SitePage = ({ data }) => {
   const {
@@ -10,7 +11,6 @@ const SitePage = ({ data }) => {
     image,
     built_with,
   } = data.prismicSites.data
-  console.log("image:", image)
 
   return (
     <Container>
@@ -18,16 +18,18 @@ const SitePage = ({ data }) => {
         <H1Styled>{title.text}</H1Styled>
         <PStyled>{rich_text.text}</PStyled>
         <P1Styled>{built_with.text}</P1Styled>
-        <a href={site_link.url}>
+        {site_link.url ? (
+          <AImageStyled href={site_link.url}>
+            <img src={image.url} alt={title.text} />
+          </AImageStyled>
+        ) : (
           <img src={image.url} alt={title.text} />
-        </a>
-        <AStyled
-          className="animate__animated animate__bounce"
-          target="_blank"
-          href={site_link.url}
-        >
-          Explore the site
-        </AStyled>
+        )}
+        {site_link.url && (
+          <AStyled target="_blank" href={site_link.url}>
+            Explore the site
+          </AStyled>
+        )}
       </ContentContainer>
     </Container>
   )
@@ -60,8 +62,10 @@ export const pageQuery = graphql`
 export default SitePage
 
 const Container = styled.div`
-  background: #b1eaea;
+  background: ${colours.bgGray};
   width: 100%;
+  min-height: 100vh;
+
   @media only screen and (max-width: 768px) {
   }
 `
@@ -69,6 +73,12 @@ const Container = styled.div`
 const H1Styled = styled.h1`
   color: #000;
   text-shadow: 1px 1px #ccc;
+`
+
+const AImageStyled = styled.a`
+  img {
+    margin: auto;
+  }
 `
 
 const AStyled = styled.a`
@@ -87,32 +97,35 @@ const P1Styled = styled.p`
 `
 const ContentContainer = styled.div`
   display: flex;
-  background: #b1eaea;
+  background: ${colours.bgGray};
   position: relative;
   padding: 60px 120px;
-  height: 100vh;
+  height: 100%;
   flex-direction: column;
   a {
     color: black;
     text-decoration: none;
     cursor: pointer;
     width: fit-content;
-    margin: auto;
+    margin: 20px auto;
     &:hover {
       transition: all 0.5s ease;
       transform: scale(1.1);
     }
   }
   img {
-    max-width: 400px;
+    max-width: 600px;
     max-height: 400px;
+    width: 90%;
     border-radius: 5px;
+    @media only screen and (max-width: 768px) {
+      max-width: 400px;
+      max-height: 400px;
+      width: 90%;
+    }
   }
+
   @media only screen and (max-width: 1100px) {
-    height: 100%;
-  }
-  @media only screen and (max-width: 768px) {
     padding: 50px;
-    height: 100%;
   }
 `

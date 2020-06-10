@@ -10,20 +10,27 @@ import { Helmet } from "react-helmet"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-// import "animate.min.css"
+import {
+  BrowserView,
+  MobileView,
+  isBrowser,
+  isMobile,
+} from "react-device-detect"
 
-import Header from "./header"
 import "./layout.css"
 import SEO from "./seo"
 import Sidebar from "./sidebar"
+import Footer from "./Footer"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, sitePage }) => {
   const [loaded, setLoaded] = useState(false)
   useEffect(() => {
+    window.scrollTo(0, 0)
     setTimeout(() => {
       setLoaded(true)
     }, 500)
   }, [])
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -36,10 +43,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <Container loaded={loaded}>
+      <Container loaded={loaded} sitePage={sitePage}>
         <SEO title={"Lodge Creates"} />
-        <Sidebar />
+        <Sidebar sitePage={sitePage} isMobile={isMobile} />
         {children}
       </Container>
     </>
