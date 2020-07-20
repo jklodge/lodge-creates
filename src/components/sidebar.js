@@ -3,14 +3,15 @@ import styled from "styled-components"
 import { isMobile } from "react-device-detect"
 import Social from "./social"
 import "../styles.scss"
-import { Link } from "gatsby"
+
 import colours from "../colours"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Menu from "./Menu"
 import Modal from "react-modal"
 
 const Sidebar = ({ sitePage }) => {
-  const [modalIsOpen, setIsOpen] = React.useState(false)
+  const [modalIsOpen, setIsOpen] = useState(false)
+  const [welcomeText, setWelcomeText] = useState(false)
   function openModal() {
     setIsOpen(true)
   }
@@ -23,7 +24,19 @@ const Sidebar = ({ sitePage }) => {
   function closeModal() {
     setIsOpen(false)
   }
-  useEffect(() => {}, [])
+
+  useEffect(() => {
+    const today = new Date()
+    const curHr = today.getHours()
+
+    if (curHr < 12) {
+      setWelcomeText("good morning")
+    } else if (curHr < 18) {
+      setWelcomeText("good afternoon")
+    } else {
+      setWelcomeText("good evening")
+    }
+  }, [])
 
   return (
     <Container sitePage={sitePage} isMobile={isMobile}>
@@ -43,12 +56,12 @@ const Sidebar = ({ sitePage }) => {
         <Menu closeModal={closeModal} />
       </Modal>
       <AniLink swipe direction="right" to="/">
-        <H1Styled>Lodge Creates</H1Styled>
+        <H1Styled>{welcomeText}</H1Styled>
       </AniLink>
       {!sitePage || (sitePage && !isMobile) ? (
         <PStyled>
           I am a Frontend developer based in London. In short, I am passionate
-          about bringing fun, meaningful or unique ideas to life. I enjoy
+          about bringing fun, meaningful and unique ideas to life. I enjoy
           working on new projects with different technologies. Here is a
           selection of projects I have worked on professionally, plus my own
           projects. Please feel free to explore & tell me what you think!
@@ -100,6 +113,7 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     padding: 30px 60px 20px;
+    margin: auto;
   }
   @media only screen and (max-width: 378px) {
     min-width: 315px;
